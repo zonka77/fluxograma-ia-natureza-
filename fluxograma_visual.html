@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxograma: IA na Preservação da Natureza</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 15px 15px 0 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .flowchart-section {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #2ecc71;
+        }
+
+        .flowchart-section h2 {
+            color: #2ecc71;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .mermaid {
+            display: flex;
+            justify-content: center;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            border: 2px dashed #2ecc71;
+            overflow-x: auto;
+        }
+
+        .diagram-wrapper {
+            overflow-x: auto;
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .description {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e8f5e9;
+            border-radius: 8px;
+            color: #1b5e20;
+            line-height: 1.6;
+        }
+
+        .legend {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .legend-item {
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            border-left: 4px solid #2ecc71;
+        }
+
+        .legend-item strong {
+            color: #2ecc71;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tab-button {
+            padding: 10px 20px;
+            background: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+
+        .tab-button:hover {
+            background: #27ae60;
+            transform: translateY(-2px);
+        }
+
+        .tab-button.active {
+            background: #1b5e20;
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 Fluxograma: IA na Preservação da Natureza</h1>
+            <p>Como a Inteligência Artificial pode ajudar o ser humano a preservar e proteger nosso planeta</p>
+        </header>
+
+        <div class="content">
+            <!-- FLUXOGRAMA PRINCIPAL -->
+            <div class="flowchart-section">
+                <h2>🎯 Fluxograma Principal - Visão Geral</h2>
+                <div class="diagram-wrapper">
+                    <div class="mermaid">
+                        graph TD
+                            Start["🌍 NATUREZA EM RISCO"] --> Input["📥 COLETA DE DADOS"]
+                            
+                            Input --> Sources["<b>FONTES DE DADOS</b><br/>🛰️ Satélites<br/>📡 Sensores IoT<br/>🚁 Drones<br/>📹 Câmeras"]
+                            
+                            Sources --> Processing["<b>⚙️ PROCESSAMENTO</b><br/>Data Lake<br/>ETL<br/>Cloud Computing"]
+                            
+                            Processing --> AI["<b>🧠 INTELIGÊNCIA ARTIFICIAL</b><br/>Machine Learning<br/>Deep Learning<br/>Análise Preditiva<br/>Reconhecimento Imagem"]
+                            
+                            AI --> Analysis["<b>📊 ANÁLISE</b>"]
+                            
+                            Analysis --> Branch1["🔍 Monitoramento<br/>Ambiental"]
+                            Analysis --> Branch2["🦁 Proteção<br/>Vida Selvagem"]
+                            Analysis --> Branch3["💧 Gestão<br/>Recursos"]
+                            Analysis --> Branch4["⚡ Energias<br/>Renováveis"]
+                            Analysis --> Branch5["🌱 Recuperação<br/>Ecossistemas"]
+                            
+                            Branch1 --> Output["📤 RESULTADOS & ALERTAS"]
+                            Branch2 --> Output
+                            Branch3 --> Output
+                            Branch4 --> Output
+                            Branch5 --> Output
+                            
+                            Output --> Action["👥 AÇÃO HUMANA<br/>Decisões<br/>Políticas<br/>Projetos"]
+                            
+                            Action --> Result["✅ NATUREZA PRESERVADA<br/>🌿 FUTURO SUSTENTÁVEL"]
+                            
+                            Result --> Feedback["↩️ FEEDBACK E MELHORIA"]
+                            Feedback --> AI
+                            
+                            style Start fill:#e74c3c,stroke:#c0392b,color:#fff,stroke-width:3px
+                            style AI fill:#f39c12,stroke:#d68910,color:#fff,stroke-width:3px
+                            style Result fill:#2ecc71,stroke:#27ae60,color:#fff,stroke-width:3px
+                            style Branch1 fill:#3498db,stroke:#2980b9,color:#fff
+                            style Branch2 fill:#3498db,stroke:#2980b9,color:#fff
+                            style Branch3 fill:#3498db,stroke:#2980b9,color:#fff
+                            style Branch4 fill:#3498db,stroke:#2980b9,color:#fff
+                            style Branch5 fill:#3498db,stroke:#2980b9,color:#fff
+                    </div>
+                </div>
+                <div class="description">
+                    <strong>📌 Explicação do Fluxograma Principal:</strong><br>
+                    O processo começa com a coleta de dados de múltiplas fontes (satélites, sensores, drones).
+                    Esses dados são processados em tempo real e analisados por algoritmos de IA. Os resultados são
+                    divididos em 5 áreas de atuação, gerando alertas e insights que guiam a ação humana para
+                    preservação efetiva. Um sistema de feedback contínuo melhora constantemente os algoritmos.
+                </div>
+            </div>
+
+            <!-- TABS PARA CADA FLUXOGRAMA ESPECÍFICO -->
+            <div class="flowchart-section">
+                <h2>📋 Fluxogramas Específicos por Área</h2>
+                
+                <div class="tabs">
+                    <button class="tab-button active" onclick="showTab(event, 'tab1')">🔍 Monitoramento Ambiental</button>
+                    <button class="tab-button" onclick="showTab(event, 'tab2')">🦁 Proteção Vida Selvagem</button>
+                    <button class="tab-button" onclick="showTab(event, 'tab3')">💧 Gestão Recursos</button>
+                    <button class="tab-button" onclick="showTab(event, 'tab4')">⚡ Energias Renováveis</button>
+                    <button class="tab-button" onclick="showTab(event, 'tab5')">🌱 Recuperação Ecossistemas</button>
+                </div>
+
+                <!-- TAB 1: MONITORAMENTO AMBIENTAL -->
+                <div id="tab1" class="tab-content active">
+                    <div class="diagram-wrapper">
+                        <div class="mermaid">
+                            graph LR
+                                A["🛰️ SATÉLITES<br/>Imagens Diárias"] --> B["🔄 PROCESSAMENTO<br/>Análise Imagem"]
+                                C["🌡️ SENSORES IoT<br/>Dados Ambientais"] --> B
+                                D["🚁 DRONES<br/>Verificação Local"] --> B
+                                E["🔊 SENSORES SONOROS<br/>Monitoramento Acústico"] --> B
+                                
+                                B --> F["🧠 REDES NEURAIS<br/>CONVOLUCIONAIS<br/>CNN & ResNets"]
+                                
+                                F --> G["✅ DETECÇÃO"]
+                                
+                                G -->|"🌳 Desmatamento"| H["Área em hectares<br/>Localização GPS<br/>Urgência: CRÍTICA"]
+                                G -->|"💨 Poluição Aérea"| I["Nível de poluição<br/>Tipo de poluente<br/>Tendência: AUMENTANDO"]
+                                G -->|"💧 Qualidade Água"| J["Contaminantes<br/>pH e salinidade<br/>Status: ANÔMALO"]
+                                G -->|"🔥 Fogo/Queimadas"| K["Focos de calor<br/>Área afetada<br/>Risco: MUITO ALTO"]
+                                
+                                H --> L["📱 ALERTA EM TEMPO REAL"]
+                                I --> L
+                                J --> L
+                                K --> L
+                                
+                                L --> M["👮 AUTORIDADES<br/>Agências Ambientais<br/>Bombeiros<br/>Polícia Ambiental"]
+                                
+                                M --> N["🚨 AÇÃO IMEDIATA<br/>Intervenção<br/>Investigação<br/>Processamento"]
+                                
+                                style A fill:#3498db,color:#fff
+                                style C fill:#3498db,color:#fff
+                                style D fill:#3498db,color:#fff
+                                style E fill:#3498db,color:#fff
+                                style F fill:#f39c12,color:#fff,stroke-width:3px
+                                style H fill:#e74c3c,color:#fff
+                                style I fill:#e74c3c,color:#fff
+                                style J fill:#e74c3c,color:#fff
+                                style K fill:#e74c3c,color:#fff
+                                style L fill:#e67e22,color:#fff,stroke-width:2px
+                                style N fill:#2ecc71,color:#fff,stroke-width:2px
+                        </div>
+                    </div>
+                    <div class="description">
+                        <strong>🔍 Monitoramento Ambiental:</strong> Sistema contínuo de detecção de problemas ambientais.
+                        Satélites capturam imagens diárias, sensores monitoram dados em tempo real, e algoritmos de IA
+                        (CNN) analisam tudo simultaneamente. Quando anomalias são detectadas, alertas são enviados
+                        imediatamente para autoridades competentes que podem agir em minutos, não em dias.
+                    </div>
+                </div>
+
+                <!-- TAB 2: PROTEÇÃO VIDA SELVAGEM -->
+                <div id="tab2" class="tab-content">
+                    <div class="diagram-wrapper">
+                        <div class="mermaid">
+                            graph LR
+                                A["📷 CÂMERAS<br/>DE TRILHA"] --> B["🔄 PROCESSAMENTO<br/>Análise Visual"]
+                                C["🛰️ RASTREADORES<br/>GPS ANIMAL"] --> D["📊 ANÁLISE<br/>MOVIMENTO"]
+                                E["🔊 MICROFONES<br/>AMBIENTAIS"] --> F["🎵 ANÁLISE<br/>SONORA"]
+                                G["📹 IMAGENS<br/>AÉREAS"] --> B
+                                
+                                B --> H["🤖 VISÃO<br/>COMPUTACIONAL<br/>ResNets & YOLO"]
+                                D --> I["📈 PADRÕES<br/>DE MIGRAÇÃO"]
+                                F --> J["🔊 RECONHECIMENTO<br/>SONORO"]
+                                
+                                H --> K["✅ IDENTIFICAÇÃO"]
+                                I --> K
+                                J --> K
+                                
+                                K -->|"🐘 Espécie"| L["Elefante Africano<br/>Localização: Tanzânia<br/>População: 152"]
+                                K -->|"🔫 Caça Ilegal"| M["ALERTA!<br/>Som de tiro detectado<br/>Coordenadas GPS"]
+                                K -->|"🌍 Migração"| N["Rota prevista<br/>Horário esperado<br/>Proteção: AUMENTADA"]
+                                K -->|"👁️ Vigilância"| O["Indivíduos únicos<br/>Saúde: BOA<br/>Status: RASTREADO"]
+                                
+                                M --> P["🚨 ALERT CRÍTICO"]
+                                P --> Q["🚔 EQUIPE DE<br/>PROTEÇÃO<br/>Rangers<br/>Polícia"]
+                                
+                                L --> R["📊 BANCO DE DADOS<br/>BIODIVERSIDADE"]
+                                N --> R
+                                O --> R
+                                Q --> R
+                                
+                                R --> S["🛡️ HABITATS<br/>PROTEGIDOS<br/>Espécies Salvas"]
+                                
+                                style H fill:#f39c12,color:#fff,stroke-width:3px
+                                style I fill:#f39c12,color:#fff,stroke-width:3px
+                                style J fill:#f39c12,color:#fff,stroke-width:3px
+                                style M fill:#e74c3c,color:#fff
+                                style P fill:#e74c3c,color:#fff,stroke-width:2px
+                                style S fill:#2ecc71,color:#fff,stroke-width:2px
+                        </div>
+                    </div>
+                    <div class="description">
+                        <strong>🦁 Proteção da Vida Selvagem:</strong> Múltiplas tecnologias trabalham juntas para proteger
+                        animais ameaçados. Câmeras de trilha com IA identificam espécies, rastreadores GPS monitoram
+                        movimentos migratórios, sensores sonoros detectam caça ilegal em tempo real. Quando perigo é
+                        detectado, equipes de proteção são alertadas imediatamente para interceptar caçadores.
+                    </div>
+                </div>
+
+                <!-- TAB 3: GESTÃO DE RECURSOS -->
+                <div id="tab3" class="tab-content">
+                    <div class="diagram-wrapper">
+                        <div class="mermaid">
+                            graph TD
+                                A["📊 DADOS DE RECURSOS"]
+                                
+                                A --> B["💧 ÁGUA<br/>Pluviometria<br/>Vazões<br/>Aquíferos"]
+                                A --> C["🌳 FLORESTAS<br/>Cobertura vegetal<br/>Saúde das árvores<br/>Biodiversidade"]
+                                A --> D["🌾 SOLO<br/>Nutrientes<br/>Umidade<br/>Erosão"]
+                                A --> E["🚜 AGRICULTURA<br/>Plantios<br/>Colheitas<br/>Pragas"]
+                                
+                                B --> F["🧮 ALGORITMOS<br/>DE OTIMIZAÇÃO<br/>Linear Programming<br/>Algoritmos Genéticos<br/>Redes Neurais"]
+                                C --> F
+                                D --> F
+                                E --> F
+                                
+                                F --> G["📈 MODELO PREDITIVO"]
+                                
+                                G -->|"💧 Água"| H["Economia: 20-30%<br/>Aumento rendimento<br/>Reduz desperdício"]
+                                G -->|"🌳 Florestas"| I["Corte sustentável<br/>Reflorestamento<br/>Biodiversidade ↑"]
+                                G -->|"🌾 Solo"| J["Qualidade melhorada<br/>Erosão reduzida<br/>Produtividade ↑"]
+                                G -->|"🚜 Agricultura"| K["Plantio otimizado<br/>Menos insumos<br/>Mais produção"]
+                                
+                                H --> L["✅ RECURSOS<br/>OTIMIZADOS"]
+                                I --> L
+                                J --> L
+                                K --> L
+                                
+                                L --> M["🌍 SUSTENTABILIDADE<br/>AUMENTADA"]
+                                
+                                style F fill:#f39c12,color:#fff,stroke-width:3px
+                                style L fill:#2ecc71,color:#fff
+                                style M fill:#27ae60,color:#fff,stroke-width:2px
+                        </div>
+                    </div>
+                    <div class="description">
+                        <strong>💧 Gestão de Recursos Naturais:</strong> Algoritmos avançados de otimização analisam dados
+                        de múltiplos recursos (água, florestas, solo, agricultura). Modelos preditivos identificam
+                        ineficiências e sugerem melhorias. Resultado: 20-30% menos desperdício de água, 25%+ aumento
+                        em produção agrícola sustentável, e habitats naturais melhor preservados.
+                    </div>
+                </div>
+
+                <!-- TAB 4: ENERGIAS RENOVÁVEIS -->
+                <div id="tab4" class="tab-content">
+                    <div class="diagram-wrapper">
+                        <div class="mermaid">
+                            graph LR
+                                A["☀️ ENERGIA SOLAR<br/>Irradiação<br/>Nuvens<br/>Temperatura"]
+                                
+                                B["💨 ENERGIA EÓLICA<br/>Velocidade vento<br/>Direção<br/>Padrões"]
+                                
+                                C["🌊 ENERGIA<br/>HIDRÁULICA<br/>Vazão<br/>Precipitação"]
+                                
+                                D["🔥 ENERGIA<br/>GEOTÉRMICA<br/>Temperatura<br/>Profundidade"]
+                                
+                                A --> E["🧠 LSTM & GRU<br/>REDES NEURAIS<br/>RECORRENTES<br/><br/>Séries Temporais<br/>Padrões Históricos<br/>Previsão Futura"]
+                                
+                                B --> E
+                                C --> E
+                                D --> E
+                                
+                                E --> F["🔮 PREVISÃO<br/>24-72 HORAS"]
+                                
+                                F -->|"☀️ Solar"| G["Irradiação prevista<br/>Eficiência máxima<br/>Ganho: 15-25%"]
+                                
+                                F -->|"💨 Eólica"| H["Vento previsto<br/>Turbinas otimizadas<br/>Ganho: 20%+"]
+                                
+                                F -->|"🌊 Hidráulica"| I["Vazão estimada<br/>Reservas ajustadas<br/>Eficiência: +15%"]
+                                
+                                F -->|"🔥 Geotérmica"| J["Demanda prevista<br/>Produção constante<br/>Baseload: 24/7"]
+                                
+                                G --> K["💾 ARMAZENAMENTO<br/>INTELIGENTE"]
+                                H --> K
+                                I --> K
+                                J --> K
+                                
+                                K --> L["⚙️ GRID MANAGEMENT<br/>Balanceamento<br/>Distribuição<br/>Eficiência"]
+                                
+                                L --> M["✅ ENERGIA LIMPA<br/>& EFICIENTE<br/>100% Renovável"]
+                                
+                                M --> N["🌍 CARBONO<br/>REDUZIDO<br/>-8.5% ao ano"]
+                                
+                                style E fill:#f39c12,color:#fff,stroke-width:3px
+                                style M fill:#2ecc71,color:#fff,stroke-width:2px
+                                style N fill:#27ae60,color:#fff,stroke-width:2px
+                        </div>
+                    </div>
+                    <div class="description">
+                        <strong>⚡ Otimização de Energias Renováveis:</strong> Redes neurais recorrentes (LSTM/GRU)
+                        processam dados meteorológicos contínuos para prever geração de energia 24-72 horas antecipadamente.
+                        Isso permite otimizar painéis solares (+15-25% eficiência), ajustar turbinas eólicas (+20% ganho),
+                        e gerenciar armazenamento de energia eficientemente, reduzindo pegada de carbono em 8,5% ao ano.
+                    </div>
+                </div>
+
+                <!-- TAB 5: RECUPERAÇÃO ECOSSISTEMAS -->
+                <div id="tab5" class="tab-content">
+                    <div class="diagram-wrapper">
+                        <div class="mermaid">
+                            graph TD
+                                A["🌳 ÁREA DEGRADADA"]
+                                
+                                A --> B["🔍 ANÁLISE INICIAL<br/>Biodiversidade atual<br/>Qualidade solo<br/>Histórico ecológico"]
+                                
+                                B --> C["🧠 SIMULAÇÃO COM IA<br/>MODELOS PREDITIVOS<br/><br/>100+ Cenários<br/>Análise impacto<br/>Otimização resultado"]
+                                
+                                C --> D["🎯 PLANO OTIMIZADO<br/>Espécies nativas<br/>Cronograma<br/>Orçamento<br/>Estratégia"]
+                                
+                                D --> E["✅ IMPLEMENTAÇÃO<br/><br/>REFLORESTAMENTO"]
+                                D --> F["✅ IMPLEMENTAÇÃO<br/><br/>RESTAURAÇÃO HABITAT"]
+                                D --> G["✅ IMPLEMENTAÇÃO<br/><br/>LIMPEZA ÁGUA"]
+                                D --> H["✅ IMPLEMENTAÇÃO<br/><br/>CONTROLE INVASORAS"]
+                                
+                                E --> I["📊 MONITORAMENTO<br/>CONTÍNUO<br/>IA acompanha 24/7"]
+                                F --> I
+                                G --> I
+                                H --> I
+                                
+                                I --> J["📈 ANÁLISE PROGRESSO<br/>Crescimento árvores<br/>Fauna retornando<br/>Qualidade água"]
+                                
+                                J --> K["🔄 AJUSTES DINÂMICOS<br/>Algoritmo melhora<br/>Estratégia evolui<br/>Resultados otimizados"]
+                                
+                                K --> L["🌿 ECOSSISTEMA<br/>RESTAURADO<br/>Biodiversidade 100%<br/>Habitats funcionais"]
+                                
+                                style C fill:#f39c12,color:#fff,stroke-width:3px
+                                style L fill:#2ecc71,color:#fff,stroke-width:2px
+                        </div>
+                    </div>
+                    <div class="description">
+                        <strong>🌱 Recuperação de Ecossistemas:</strong> Algoritmos de simulação analisam áreas degradadas
+                        e testam 100+ cenários de recuperação diferentes. Um plano otimizado é gerado com melhor estratégia
+                        de reflorestamento, restauração de habitat, limpeza de água e controle de espécies invasoras.
+                        Monitoramento contínuo com IA acompanha o progresso, fazendo ajustes em tempo real para maximizar
+                        recuperação de biodiversidade.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FLUXOGRAMA DE DADOS -->
+            <div class="flowchart-section">
+                <h2>🔄 Fluxo de Dados - Arquitetura Técnica</h2>
+                <div class="diagram-wrapper">
+                    <div class="mermaid">
+                        graph LR
+                            A["📡 COLETA"] 
+                            A -->|"Satélites<br/>1.5M km²/dia"| B["🗄️ DATA LAKE<br/>Petabytes"]
+                            A -->|"Sensores<br/>1000+ pontos"| B
+                            A -->|"Drones<br/>10000+ voos"| B
+                            
+                            B --> C["🔄 ETL<br/>Transformação<br/>Limpeza<br/>Validação"]
+                            
+                            C --> D["💾 DATA<br/>WAREHOUSE<br/>Dados estruturados"]
+                            
+                            D --> E["🧠 MACHINE<br/>LEARNING"]
+                            D --> F["🧠 DEEP<br/>LEARNING"]
+                            D --> G["📊 ANÁLISE<br/>PREDITIVA"]
+                            
+                            E --> H["🎯 MODELOS IA<br/>Treinamento<br/>Validação<br/>Deploy"]
+                            F --> H
+                            G --> H
+                            
+                            H --> I["📤 OUTPUT"]
+                            
+                            I -->|"Dashboards"| J["👁️ VISUALIZAÇÃO"]
+                            I -->|"Alertas"| K["🚨 NOTIFICAÇÕES"]
+                            I -->|"APIs"| L["🔗 INTEGRAÇÕES"]
+                            I -->|"Relatórios"| M["📄 DOCUMENTOS"]
+                            
+                            J --> N["👥 DECISORES<br/>POLÍTICOS<br/>EMPRESAS<br/>ONG"]
+                            K --> N
+                            L --> N
+                            M --> N
+                            
+                            N --> O["✅ AÇÃO<br/>PRESERVAÇÃO"]
+                            
+                            O --> P["📊 FEEDBACK<br/>Dados novos<br/>Melhoria continua"]
+                            P --> B
+                            
+                            style B fill:#3498db,color:#fff
+                            style H fill:#f39c12,color:#fff,stroke-width:3px
+                            style O fill:#2ecc71,color:#fff,stroke-width:2px
+                    </div>
+                </div>
+                <div class="description">
+                    <strong>🔄 Fluxo Arquitetural:</strong> Dados chegam de múltiplas fontes em tempo real (satélites,
+                    sensores, drones). São armazenados em um Data Lake massivo, transformados por processos ETL, e
+                    estruturados em Data Warehouse. Algoritmos de ML/DL são treinados e deployados em produção.
+                    Resultados são disponibilizados via dashboards, alertas, APIs e relatórios para decisores.
+                    Um loop de feedback garante melhoria contínua dos modelos.
+                </div>
+            </div>
+
+            <!-- FLUXOGRAMA DE DECISÃO -->
+            <div class="flowchart-section">
+                <h2>🎯 Árvore de Decisão - O Que Fazer?</h2>
+                <div class="diagram-wrapper">
+                    <div class="mermaid">
+                        graph TD
+                            A["🤖 IA DETECTA PROBLEMA"] --> B{"Qual o tipo<br/>de problema?"}
+                            
+                            B -->|"Desmatamento"| C["Urgência: CRÍTICA"]
+                            B -->|"Poluição"| D["Urgência: ALTA"]
+                            B -->|"Caça ilegal"| E["Urgência: CRÍTICA"]
+                            B -->|"Energia<br/>ineficiente"| F["Urgência: MÉDIA"]
+                            
+                            C --> C1{"Área afetada<br/>< 100 ha?"}
+                            C1 -->|"SIM"| C2["⚡ Alerta local<br/>Ação rápida<br/>1-2 horas"]
+                            C1 -->|"NÃO"| C3["🚨 Alerta nacional<br/>Mobilização federal<br/>< 30 minutos"]
+                            
+                            D --> D1{"Nível de<br/>poluição?"}
+                            D1 -->|"> 150 AQI"| D2["⚠️ Alerta população<br/>Recomendações<br/>Investigação"]
+                            D1 -->|"< 150 AQI"| D3["📊 Monitorar<br/>Registrar dados<br/>Prevenir piora"]
+                            
+                            E --> E1["🚔 POLICIA AMBIENTAL<br/>Coordenadas GPS<br/>Video evidência<br/>Operação prisão"]
+                            
+                            F --> F1["📈 OTIMIZAR<br/>Ajustar sistema<br/>Aumentar eficiência<br/>Agenda planejada"]
+                            
+                            C2 --> G["👥 EQUIPE LOCAL<br/>Município<br/>ONG<br/>Comunidade"]
+                            C3 --> G
+                            D2 --> H["🏥 SAÚDE PÚBLICA<br/>Órgãos ambientais<br/>Mídia<br/>População"]
+                            D3 --> I["📊 CENTRO DE DADOS<br/>Análise continua<br/>Predição"]
+                            E1 --> J["✅ RESULTADO:<br/>Criminoso preso<br/>Animais salvos"]
+                            F1 --> K["✅ RESULTADO:<br/>Energia otimizada<br/>Custos reduzidos"]
+                            
+                            G --> L["🌿 PRESERVAÇÃO"]
+                            H --> L
+                            I --> L
+                            J --> L
+                            K --> L
+                            
+                            style A fill:#f39c12,color:#fff,stroke-width:3px
+                            style L fill:#2ecc71,color:#fff,stroke-width:3px
+                    </div>
+                </div>
+                <div class="description">
+                    <strong>🎯 Árvore de Decisão:</strong> Quando IA detecta um problema, segue uma árvore de decisão
+                    que avalia urgência, escala e tipo de intervenção necessária. Problemas críticos (desmatamento,
+                    caça ilegal) acionam respostas imediatas com coordenadas precisas. Problemas menos urgentes
+                    são monitorados continuamente. Cada caminho leva a ações específicas com equipes apropriadas.
+                </div>
+            </div>
+
+            <!-- LEGENDA TÉCNICA -->
+            <div class="flowchart-section">
+                <h2>📚 Legenda Técnica e Abreviações</h2>
+                <div class="legend">
+                    <div class="legend-item">
+                        <strong>CNN:</strong> Redes Neurais Convolucionais para processar imagens
+                    </div>
+                    <div class="legend-item">
+                        <strong>LSTM:</strong> Long Short-Term Memory para séries temporais
+                    </div>
+                    <div class="legend-item">
+                        <strong>GRU:</strong> Gated Recurrent Unit para previsões
+                    </div>
+                    <div class="legend-item">
+                        <strong>YOLO:</strong> Real-time object detection para visão
+                    </div>
+                    <div class="legend-item">
+                        <strong>ResNets:</strong> Deep Residual Networks para visão computacional
+                    </div>
+                    <div class="legend-item">
+                        <strong>ETL:</strong> Extract, Transform, Load de dados
+                    </div>
+                    <div class="legend-item">
+                        <strong>IoT:</strong> Internet of Things - sensores conectados
+                    </div>
+                    <div class="legend-item">
+                        <strong>AQI:</strong> Air Quality Index - índice de qualidade do ar
+                    </div>
+                    <div class="legend-item">
+                        <strong>IA:</strong> Inteligência Artificial
+                    </div>
+                    <div class="legend-item">
+                        <strong>ML:</strong> Machine Learning
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>🌍 <strong>Fluxograma: IA na Preservação da Natureza</strong> | Criado para um futuro sustentável 🌿</p>
+            <p>Todos os fluxogramas foram desenvolvidos com Mermaid.js e são completamente interativos.</p>
+        </footer>
+    </div>
+
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'default', securityLevel: 'loose' });
+        mermaid.contentLoaded();
+
+        function showTab(evt, tabName) {
+            // Hide all tab contents
+            const tabContents = document.getElementsByClassName('tab-content');
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+            }
+
+            // Remove active class from all buttons
+            const tabButtons = document.getElementsByClassName('tab-button');
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove('active');
+            }
+
+            // Show the current tab
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to the clicked button
+            evt.currentTarget.classList.add('active');
+
+            // Reinitialize mermaid for the newly visible diagrams
+            setTimeout(() => {
+                mermaid.contentLoaded();
+            }, 100);
+        }
+    </script>
+</body>
+</html>
